@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">  <!-- thymeleaf 불러오기-->
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+<body>
+    <h1>안녕하세요!</h1>
+    <h2 th:text="${name}"></h2> <!-- name key 불러오기-->
+    <ul>
+        <li th:each="fruit : ${fruits}" th:text="${fruit}"></li>
+        <p th:if="${fruit == '사과'}" >사과를 좋아하세요!</p>
+        <p th:else>사과를 좋아하지 않으세요.</p>
+    </ul>
+
+</body>
+</html>
